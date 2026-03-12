@@ -9,8 +9,9 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.6;
+    font-size: 18px;
     color: #111827;
-    background: #f3f4f6;
+    background: #d7ff8c; /* lemon green */
 }
 
 /* Navbar */
@@ -63,7 +64,7 @@ nav {
 }
 
 .section h2 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 16px;
 }
 
@@ -73,12 +74,8 @@ nav {
 }
 
 /* Hero */
-.hero {
-    background: linear-gradient(135deg, #e0f2fe, #fce7f3);
-}
-
 .hero-intro {
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: #6b7280;
@@ -86,18 +83,18 @@ nav {
 }
 
 .hero-title {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 8px;
 }
 
 .hero-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: #4b5563;
     margin-bottom: 16px;
 }
 
 .hero-text {
-    color: #4b5563;
+    color: #374151;
     margin-bottom: 24px;
 }
 
@@ -175,7 +172,38 @@ nav {
     padding: 6px 12px;
     border-radius: 999px;
     background: #eef2ff;
-    font-size: 13px;
+    font-size: 14px;
+}
+
+/* About */
+.about-layout {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.about-photo img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #111827;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.35);
+}
+
+.about-text {
+    max-width: 580px;
+    text-align: left;
+    font-size: 19px;
+}
+
+@media (max-width: 640px) {
+    .about-text {
+        text-align: center;
+    }
 }
 
 /* Contact */
@@ -189,16 +217,14 @@ nav {
 }
 
 .contact-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
     padding: 10px 14px;
     border-radius: 12px;
     background: #ffffff;
     border: 1px solid #e5e7eb;
     text-decoration: none;
     color: #111827;
-    font-size: 14px;
+    font-size: 15px;
     transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
 
@@ -214,7 +240,41 @@ nav {
 
 .contact-value {
     color: #4b5563;
-    margin-left: 12px;
+    margin-left: 0;
+}
+
+.contact-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.contact-icon-email {
+    background: #111827;
+}
+
+.contact-icon-instagram {
+    background: linear-gradient(135deg, #f97316, #ec4899, #6366f1);
+}
+
+.contact-icon-github {
+    background: #111827;
+}
+
+.contact-icon-linkedin {
+    background: #0a66c2;
 }
 
 /* Responsive */
